@@ -23,3 +23,31 @@ function loadUserName() {
         document.getElementById("namePopup").style.display = "block";
     }
 }
+// Function to Create and Save To-Do Items
+function CreateToDoItems() {
+    let todoText = document.getElementById("todoText").value.trim();
+    let todoDate = document.getElementById("todoDate").value;
+    let taskType = document.getElementById("taskType").value; // daily, weekly, monthly
+
+    if (todoText === "" || todoDate === "") {
+        alert("Please enter a task and select a date!");
+        return;
+    }
+
+    let tasks = JSON.parse(localStorage.getItem("tasks")) || [];
+    
+    let newTask = {
+        text: todoText,
+        date: todoDate,
+        type: taskType,
+        completed: false
+    };
+
+    tasks.push(newTask);
+    localStorage.setItem("tasks", JSON.stringify(tasks));
+    
+    document.getElementById("todoText").value = "";
+    document.getElementById("todoDate").value = "";
+
+    displayTasks();
+}
