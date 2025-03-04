@@ -1,0 +1,12 @@
+/* Set a full-page background image */
+body {
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-image: url('project imgs/hero-bg-3000.jpeg'); /* Change to your image */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+}
