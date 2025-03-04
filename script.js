@@ -51,3 +51,26 @@ function CreateToDoItems() {
 
     displayTasks();
 }
+// Function to Display Tasks
+function displayTasks(filterType = "all") {
+    let taskList = document.getElementById("taskList");
+    taskList.innerHTML = "";
+
+    let tasks = JSON.parse(localStorage.getItem("tasks")) || [];
+
+    tasks.forEach((task, index) => {
+        if (filterType === "all" || task.type === filterType) {
+            let listItem = document.createElement("li");
+            listItem.classList.add("task-item");
+
+            listItem.innerHTML = `
+                <span class="${task.completed ? 'completed' : ''}">${task.text} - ${task.date} (${task.type})</span>
+                <button onclick="toggleComplete(${index})">${task.completed ? 'Undo' : 'Done'}</button>
+                <button onclick="editTask(${index})">Edit</button>
+                <button onclick="deleteTask(${index})">Delete</button>
+            `;
+
+            taskList.appendChild(listItem);
+        }
+    });
+}
