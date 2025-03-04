@@ -81,4 +81,16 @@ function toggleComplete(index) {
     localStorage.setItem("tasks", JSON.stringify(tasks));
     displayTasks();
 }
-
+// Function to Edit a Task
+function editTask(index) {
+    let tasks = JSON.parse(localStorage.getItem("tasks")) || [];
+    let updatedText = prompt("Edit your task:", tasks[index].text);
+    let updatedDate = prompt("Edit the date (YYYY-MM-DD):", tasks[index].date);
+    
+    if (updatedText !== null && updatedDate !== null) {
+        tasks[index].text = updatedText.trim();
+        tasks[index].date = updatedDate.trim();
+        localStorage.setItem("tasks", JSON.stringify(tasks));
+        displayTasks();
+    }
+}
