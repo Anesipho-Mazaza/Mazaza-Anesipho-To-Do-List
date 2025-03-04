@@ -31,3 +31,19 @@
         </select>
         <button onclick="CreateToDoItems()">Add Task</button>
     </div>
+    <!-- Filter Section -->
+    <div>
+        <label for="taskFilter">Filter Tasks:</label>
+        <select id="taskFilter" onchange="filterTasks()">
+            <option value="all">All</option>
+            <option value="daily">Daily</option>
+            <option value="weekly">Weekly</option>
+            <option value="monthly">Monthly</option>
+        </select>
+    </div>
+
+    <!-- Task List -->
+    <div class="todo-list">
+        <ul id="taskList"></ul>
+    </div>
+</div>
