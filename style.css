@@ -10,3 +10,22 @@ body {
     display: flex;
     flex-direction: column;
 }
+/* Centering the To-Do list */
+.container {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+/* To-Do List Box */
+.todo-body, .todo-list {
+    width: 100%;
+    max-width: 600px;
+    background: rgba(0, 0, 0, 0.8); /* Dark background with transparency */
+    padding: 20px;
+    border-radius: 10px;
+    color: white;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
