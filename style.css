@@ -60,6 +60,12 @@ button {
     padding: 10px;
     border-radius: 5px;
 }
+/* Completed Task Styling */
+.completed {
+    text-decoration: line-through; /* Strikethrough effect */
+    color: gray; /* Dimmed color for completed tasks */
+}
+
 /* Footer Styling */
 footer {
     background-color: #222;
