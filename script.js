@@ -94,3 +94,12 @@ function editTask(index) {
         displayTasks();
     }
 }
+// Function to Delete a Task
+function deleteTask(index) {
+    if (confirm("Are you sure you want to delete this task?")) {
+        let tasks = JSON.parse(localStorage.getItem("tasks")) || [];
+        tasks.splice(index, 1);
+        localStorage.setItem("tasks", JSON.stringify(tasks));
+        displayTasks();
+    }
+}
