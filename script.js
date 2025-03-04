@@ -13,3 +13,13 @@ function saveUserName() {
         document.getElementById("namePopup").style.display = "none";
     }
 }
+// Function to Load User's Name from Storage
+function loadUserName() {
+    let storedName = localStorage.getItem("userName");
+    if (storedName) {
+        document.getElementById("headerText").innerHTML = `${storedName}, Welcome! Your To-Do List`;
+        document.getElementById("namePopup").style.display = "none";
+    } else {
+        document.getElementById("namePopup").style.display = "block";
+    }
+}
