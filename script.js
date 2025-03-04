@@ -103,3 +103,8 @@ function deleteTask(index) {
         displayTasks();
     }
 }
+// Function to Filter Tasks by Type
+function filterTasks() {
+    let selectedType = document.getElementById("taskFilter").value;
+    displayTasks(selectedType);
+}
