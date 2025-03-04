@@ -20,3 +20,14 @@
         <div class="todo-header">
             <h2 id="headerText">Welcome!<br> Your To-Do List</h2>
         </div>
+     <!-- Task Input Section -->
+     <div class="todo-body">
+        <input type="text" id="todoText" class="todo-input" placeholder="Add your task">
+        <input type="date" id="todoDate" class="todo-date">
+        <select id="taskType">
+            <option value="daily">Daily</option>
+            <option value="weekly">Weekly</option>
+            <option value="monthly">Monthly</option>
+        </select>
+        <button onclick="CreateToDoItems()">Add Task</button>
+    </div>
