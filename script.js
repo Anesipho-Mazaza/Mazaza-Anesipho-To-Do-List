@@ -108,3 +108,10 @@ function filterTasks() {
     let selectedType = document.getElementById("taskFilter").value;
     displayTasks(selectedType);
 }
+// Function to Clear All Tasks
+function clearAllTasks() {
+    if (confirm("Are you sure you want to clear all tasks?")) {
+        localStorage.removeItem("tasks");
+        displayTasks();
+    }
+}
