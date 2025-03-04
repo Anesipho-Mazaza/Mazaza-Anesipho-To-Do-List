@@ -10,6 +10,16 @@ body {
     display: flex;
     flex-direction: column;
 }
+/* Bold Welcome Text */
+#headerText {
+    font-size: 28px;  /* Adjust size as needed */
+    font-weight: bold; /* Makes the text bold */
+    text-align: center; /* Centers the text */
+    text-transform: uppercase; /* Optional: Converts text to uppercase */
+    color: orange; /* Ensures visibility on dark backgrounds */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Adds slight shadow for emphasis */
+}
+
 /* Centering the To-Do list */
 .container {
     flex-grow: 1;
