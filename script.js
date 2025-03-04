@@ -74,3 +74,11 @@ function displayTasks(filterType = "all") {
         }
     });
 }
+// Function to Toggle Task Completion
+function toggleComplete(index) {
+    let tasks = JSON.parse(localStorage.getItem("tasks")) || [];
+    tasks[index].completed = !tasks[index].completed;
+    localStorage.setItem("tasks", JSON.stringify(tasks));
+    displayTasks();
+}
+
