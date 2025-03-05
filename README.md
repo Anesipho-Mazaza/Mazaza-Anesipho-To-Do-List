@@ -14,3 +14,9 @@ The main goal of this project was to implement a task management system while wo
 HTML
 CSS
 JavaScript
+
+# Usage
+Add a Task: Enter a task in the input field and click the "Add" button.
+Task Adding Limitation: User can not add todo without given full details
+Edit a Task: Click the edit icon next to the task, make your changes, and save.
+Delete a Task: Click the delete icon next to the task.
